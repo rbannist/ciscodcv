@@ -1,7 +1,7 @@
 ## ciscodcv Dockerfile
 
 
-This repository contains **Dockerfile** of ciscodcv) for [Docker](https://www.docker.io/)
+This repository contains **Dockerfile** of ciscodcv for [Docker](https://www.docker.io/)
 
 
 ### Dependencies
@@ -11,7 +11,7 @@ This repository contains **Dockerfile** of ciscodcv) for [Docker](https://www.do
 
 ### Installation
 
-1. Install [Docker](https://www.docker.io/).
+1. Install [Docker](https://www.docker.io/) natively or [on MAC using boot2docker](https://docs.docker.com/installation/mac/) 
 
 2. Download from private [Docker Hub](https://registry.hub.docker.com/u/rbannist/ciscodcv/): `docker pull rbannist/ciscodcv`
 
@@ -20,14 +20,12 @@ This repository contains **Dockerfile** of ciscodcv) for [Docker](https://www.do
 
 ### Usage
 
-    docker run -d -p 8080:8080 rbannist/ciscodcv
+    docker run -i -t -p 8080:8080 rbannist/ciscodcv [bash]
 
-#### On a Mac running boot2docker
+### On a Mac running boot2docker
 
  1. VBoxManage controlvm boot2docker-vm natpf1 "web,tcp,,8080,,8080"
 
  2. boot2docker ssh ip addr show dev eth1 -> Get IP address
 
  3. Browse to http://'ip address':8080
-
-
